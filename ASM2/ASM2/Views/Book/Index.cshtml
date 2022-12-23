@@ -1,0 +1,88 @@
+﻿@model IEnumerable<ASM2.Models.Book>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="text-center text-uppercase">List of book</h1>
+
+<p>
+    <a asp-route="createbook" class="btn btn-sm btnprimary rounded-0 text-uppercase"><i class="fas fa-plus-circle"></i>Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Title
+            </th>
+            <th>
+                ReleaseDate
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Category
+            </th>
+            <th>
+                Image
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReleaseDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryName)
+                </td>
+                <td>
+                    <img src="~/images/@item.Image"
+                         class="rounded-circle"
+                         height="40" width="40"
+                         asp-append-version="true" />
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <a asp-action="AddCart" asp-controller="Book" asp-route-id="@item.Id">AddCart</a>
+                </td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+
+
+<div style="width: 100%; display: flex; gap: 20px">
+    @foreach (var book in Model)
+    {
+        <div class=card style="width: 300px; ">
+
+            <div class="card-body" style="height: 200px;">
+                @book.Image
+            </div>
+            <h3 class="card-header">@book.Title</h3>
+            <div class="card-footer">
+                <span class="text-muted">@(book.Price.ToString("n0")) VND</span>
+                <a asp-action="AddCart" asp-controller="Book" asp-route-id="@book.Id"
+                    class="btn btn-secondary btn-sm float-right">Add to card</a>
+            </div>
+        </div>
+    }
+
+</div>
