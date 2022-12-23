@@ -32,19 +32,7 @@ namespace ASM2.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var books = from a in _context.Books
-                        join b in _context.BookCategories on a.CategoryId equals b.CategoryId
-                        select new Book
-                        {
-                            Id = a.Id,
-                            Title = a.Title,
-                            ReleaseDate = a.ReleaseDate,
-                            Price = a.Price,
-                            Image = a.Image,
-                            CategoryName = b.Name
-                        };
-
-            return View(await books.ToListAsync());
+            return View(await _context.Books.Include(x => x.Category).ToListAsync());
         }
 
         // GET: Books/Details/5
@@ -85,35 +73,16 @@ namespace ASM2.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(BookViewModel model)
+        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Price,CategoryId")] Book model)
         {
-          
-            try
+            if (ModelState.IsValid)
             {
-                var category = await _context.BookCategories.FindAsync(model.CategoryId);
-                Book book = new Book
-                {
-                    Title = model.Title,
-                    ReleaseDate = model.ReleaseDate,
-                    Price = model.Price,
-                    Image = model.Image,
-                    CategoryId = model.CategoryId,
-                    Category = category,
-
-                };
-                await _context.Books.AddAsync(book);
-
+                _context.Add(model);
                 await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
             }
-            catch (Exception)
-            {
-
-                return RedirectToAction("Index");
-
-            }
-            
-            return RedirectToAction("Index");
-
+            ViewData["CategoryId"] = new SelectList(_context.Set<Category>(), "CategoryId", "Name", model.CategoryId);
+            return View(model);
         }
 
 

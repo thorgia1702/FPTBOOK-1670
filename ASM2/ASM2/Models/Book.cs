@@ -24,8 +24,7 @@ namespace ASM2.Models
 
         [Required(ErrorMessage = "Please enter category id")]
         [ForeignKey("Category")]
-        public int CategoryId { get; set; }
-        public string CategoryName { get; set; }
+        public int CategoryId { get; set; } 
         public Category Category { get; set; }
     }
 }

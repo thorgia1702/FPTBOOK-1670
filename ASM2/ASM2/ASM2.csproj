@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>aspnet-ASM2-70FF03AE-8FF8-4705-8728-D6BF5A34FDD0</UserSecretsId>
   </PropertyGroup>
