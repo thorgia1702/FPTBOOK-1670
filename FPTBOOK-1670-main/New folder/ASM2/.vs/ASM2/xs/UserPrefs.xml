@@ -1,0 +1,54 @@
+﻿<Properties StartupConfiguration="{87151E17-081F-456C-8F9F-3AC256F43EC0}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ASM2/Views/Category/Create.cshtml">
+    <Files>
+      <File FileName="ASM2/Views/Order/Index.cshtml" Line="7" Column="51" />
+      <File FileName="ASM2/Views/Book/Cart.cshtml" Line="21" Column="17" />
+      <File FileName="ASM2/Controllers/BookController.cs" Line="343" Column="70" />
+      <File FileName="ASM2/Views/Book/Index.cshtml" Line="20" Column="35" />
+      <File FileName="ASM2/Views/Order/Delete.cshtml" Line="32" Column="41" />
+      <File FileName="ASM2/Controllers/CategoryController.cs" Line="55" Column="6" />
+      <File FileName="ASM2/Controllers/RoleController.cs" Line="1" Column="1" />
+      <File FileName="ASM2/Controllers/OrderController.cs" Line="1" Column="1" />
+      <File FileName="ASM2/Views/Home/Index.cshtml" Line="1" Column="1" />
+      <File FileName="ASM2/Views/Home/Privacy.cshtml" Line="1" Column="1" />
+      <File FileName="ASM2/Views/Category/Create.cshtml" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ASM2" expanded="True">
+            <Node name="ASM2" expanded="True">
+              <Node name="Areas" expanded="True">
+                <Node name="Identity" expanded="True">
+                  <Node name="Pages" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="ViewModels" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Book" expanded="True" />
+                <Node name="Category" expanded="True">
+                  <Node name="Create.cshtml" selected="True" />
+                </Node>
+                <Node name="Home" expanded="True" />
+                <Node name="Order" expanded="True" />
+                <Node name="Shared" expanded="True" />
+                <Node name="User" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.ASM2 PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
