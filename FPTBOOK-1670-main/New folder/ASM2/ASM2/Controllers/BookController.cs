@@ -340,7 +340,7 @@ namespace ASM2.Controllers
             {
                 var thanhtien = item.Quantity * item.Books.Price;
                 total += thanhtien;
-                cartItems += " \r\nBook: " + item.Books.Title + " --- Quantity: " +  item.Quantity + "$"; 
+                cartItems += " \r\nBook: " + item.Books.Title + " - Quantity: " +  item.Quantity + "$"; 
             }
             // tạo cấu trúc db lưu lại đơn hàng và xóa cart khỏi session
 

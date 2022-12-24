@@ -9,10 +9,10 @@
 
 <h1 class="text-center text-uppercase">List of book</h1>
 <form asp-controller="Book" asp-action="Index">
-    <p>
-        <input type="text" name="SearchString" placeholder="Search book" />
-        <input type="submit" value="Filter" />
-    </p>
+    <div class="container mb-5" style="display: flex; gap: 20px;">
+        <input id="form1" class="form-control" type="text" name="SearchString" placeholder="Search book" />
+        <input type="submit" value="Search" class="btn btn-primary" />
+    </div>
 </form>
 @if (this.User.IsInRole("Staff"))
 {<p>
@@ -86,13 +86,14 @@
 }
 else
 {
-    <div style="width: 100%; display: flex; gap: 20px">
+    <div style="width: 100%; display: flex; gap: 20px; flex-wrap: wrap;">
         @foreach (var book in Model)
         {
-            <div class=card style="width: 300px; ">
+        <div class="center">
+                <div class=card style=" width: 400px; height: 400px; ">
 
                 <div class="card-body" style="height: 200px;">
-                    <img src="@book.Image" class="rounded-circle" height="100" width="100" asp-append-version="true" />
+                        <img src="@book.Image" style="width: 100%; height: 100%" asp-append-version="true" />
                 </div>
                 <h3 class="card-header">@book.Title</h3>
                 <div class="card-footer">
@@ -101,6 +102,8 @@ else
                        class="btn btn-secondary btn-sm float-right">Add to card</a>
                 </div>
             </div>
+            
+        </div>
         }
 
     </div>}

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CTbgZl8TYKhFxUNuAA5Zh/8oAAcuN9T68tz5Lmp72xP+xsc89+2wIuhPCutG96Hvdso9wF0CCKJS9HvqdhPNWQ==",
+  "dgSpecHash": "cTw/BfWtyTQKAMUEmAbyHdlpjR4mMn6WSBgEfISqJ6y+PZLTdJhBdplhmtasDqjx1EM9t19N7f2W+ZhoHVRIKg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\LNV\\OneDrive\\Desktop\\huynguyen\\FPTBOOK-1670-main\\New folder\\ASM2\\ASM2\\ASM2.csproj",
+  "projectFilePath": "C:\\Users\\LNV\\OneDrive\\Desktop\\FPTBOOK\\FPTBOOK-1670-main\\New folder\\ASM2\\ASM2\\ASM2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LNV\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\LNV\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
